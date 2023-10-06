@@ -6,17 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://ernaizhng.github.io">
-  <title>盛最多水的容器 | Sabot的个人博客</title>
+  <title>最接近的三数之和 | Sabot的个人博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="给定一个长度为 n 的整数数组 height 。有 n 条垂线，第 i 条线的两个端点是 (i, 0) 和 (i, height[i]) 。 找出其中的两条线，使得它们与 x 轴共同构成的容器可以容纳最多的水。 返回容器可以储存的最大水量。 说明：你不能倾斜容器。 示例 1：  输入：[1,8,6,2,5,4,8,3,7] 输出：49 解释：图中垂直线代表输入数组 [1,8,6,2,5,4,8,3">
+  <meta name="description" content="给你一个长度为 n 的整数数组 nums 和 一个目标值 target。请你从 nums 中选出三个整数，使它们的和与 target 最接近。 返回这三个数的和。 假定每组输入只存在恰好一个解。 示例 1：  输入：nums &#x3D; [-1,2,1,-4], target &#x3D; 1 输出：2 解释：与 target 最接近的和是 2 (-1 + 2 + 1 &#x3D; 2) 。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="盛最多水的容器">
-<meta property="og:url" content="https://ernaizhng.github.io/2023/10/04/%E7%9B%9B%E6%9C%80%E5%A4%9A%E6%B0%B4%E7%9A%84%E5%AE%B9%E5%99%A8/index.html">
+<meta property="og:title" content="最接近的三数之和">
+<meta property="og:url" content="https://ernaizhng.github.io/2023/10/06/%E6%9C%80%E6%8E%A5%E8%BF%91%E7%9A%84%E4%B8%89%E6%95%B0%E4%B9%8B%E5%92%8C/index.html">
 <meta property="og:site_name" content="Sabot的个人博客">
-<meta property="og:description" content="给定一个长度为 n 的整数数组 height 。有 n 条垂线，第 i 条线的两个端点是 (i, 0) 和 (i, height[i]) 。 找出其中的两条线，使得它们与 x 轴共同构成的容器可以容纳最多的水。 返回容器可以储存的最大水量。 说明：你不能倾斜容器。 示例 1：  输入：[1,8,6,2,5,4,8,3,7] 输出：49 解释：图中垂直线代表输入数组 [1,8,6,2,5,4,8,3">
+<meta property="og:description" content="给你一个长度为 n 的整数数组 nums 和 一个目标值 target。请你从 nums 中选出三个整数，使它们的和与 target 最接近。 返回这三个数的和。 假定每组输入只存在恰好一个解。 示例 1：  输入：nums &#x3D; [-1,2,1,-4], target &#x3D; 1 输出：2 解释：与 target 最接近的和是 2 (-1 + 2 + 1 &#x3D; 2) 。">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2023-10-04T03:03:55.000Z">
-<meta property="article:modified_time" content="2023-10-04T03:09:49.318Z">
+<meta property="article:published_time" content="2023-10-06T10:26:10.000Z">
+<meta property="article:modified_time" content="2023-10-06T10:27:47.330Z">
 <meta property="article:author" content="Sabot">
 <meta property="article:tag" content="leetcode">
 <meta name="twitter:card" content="summary">
@@ -155,53 +155,50 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-盛最多水的容器" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-最接近的三数之和" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      盛最多水的容器
+      最接近的三数之和
     </h1>
   
 
         
-        <a href="/2023/10/04/%E7%9B%9B%E6%9C%80%E5%A4%9A%E6%B0%B4%E7%9A%84%E5%AE%B9%E5%99%A8/" class="archive-article-date">
-  	<time datetime="2023-10-04T03:03:55.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-10-04</time>
+        <a href="/2023/10/06/%E6%9C%80%E6%8E%A5%E8%BF%91%E7%9A%84%E4%B8%89%E6%95%B0%E4%B9%8B%E5%92%8C/" class="archive-article-date">
+  	<time datetime="2023-10-06T10:26:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-10-06</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>给定一个长度为 n 的整数数组 height 。有 n 条垂线，第 i 条线的两个端点是 (i, 0) 和 (i, height[i]) 。</p>
-<p>找出其中的两条线，使得它们与 x 轴共同构成的容器可以容纳最多的水。</p>
-<p>返回容器可以储存的最大水量。</p>
-<p>说明：你不能倾斜容器。</p>
+        <p>给你一个长度为 n 的整数数组 nums 和 一个目标值 target。请你从 nums 中选出三个整数，使它们的和与 target 最接近。</p>
+<p>返回这三个数的和。</p>
+<p>假定每组输入只存在恰好一个解。</p>
 <p>示例 1：</p>
 <blockquote>
-<p>输入：[1,8,6,2,5,4,8,3,7]</p>
-<p>输出：49</p>
-<p>解释：图中垂直线代表输入数组 [1,8,6,2,5,4,8,3,7]。在此情况下，容器能够容纳水（表示为蓝色部分）的最大值为 49。</p>
+<p>输入：nums &#x3D; [-1,2,1,-4], target &#x3D; 1</p>
+<p>输出：2</p>
+<p>解释：与 target 最接近的和是 2 (-1 + 2 + 1 &#x3D; 2) 。</p>
 </blockquote>
 <span id="more"></span>
 
 <p>示例 2：</p>
 <blockquote>
-<p>输入：height &#x3D; [1,1]</p>
-<p>输出：1</p>
+<p>输入：nums &#x3D; [0,0,0], target &#x3D; 1</p>
+<p>输出：0</p>
 </blockquote>
 <p>提示：</p>
 <ul>
-<li>n &#x3D;&#x3D; height.length</li>
-<li>2 &lt;&#x3D; n &lt;&#x3D; 105</li>
-<li>0 &lt;&#x3D; height[i] &lt;&#x3D; 104</li>
+<li>3 &lt;&#x3D; nums.length &lt;&#x3D; 1000</li>
+<li>-1000 &lt;&#x3D; nums[i] &lt;&#x3D; 1000</li>
+<li>-104 &lt;&#x3D; target &lt;&#x3D; 104</li>
 </ul>
-<h4 id="双指针"><a href="#双指针" class="headerlink" title="双指针"></a>双指针</h4><p>已知设左边界为l，右边界为r，则容积为height[l]与height[r]中较小的值与左右边界距离(r - l)的乘积。</p>
-<p>初始l &#x3D; 0，r &#x3D; height.length - 1，计算得到结果与当前最大容积ans进行比较取较大值，移动较小的边界至不小于当前值的位置求下一个结果，直到两边界相遇，返回最终结果。时间复杂度O(n)，空间复杂度O(1);</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">maxArea</span><span class="params">(<span class="type">int</span>[] height)</span> &#123;</span><br><span class="line">        <span class="type">int</span> <span class="variable">l</span> <span class="operator">=</span> <span class="number">0</span>, r = height.length - <span class="number">1</span>, ans = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span> (l &lt; r) &#123;</span><br><span class="line">            ans = Math.max(Math.min(height[l], height[r]) * (r - l), ans);</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> (height[l] &lt; height[r]) &#123;</span><br><span class="line">                <span class="type">int</span> <span class="variable">tmp</span> <span class="operator">=</span> height[l++];</span><br><span class="line">                <span class="keyword">while</span> (l &lt; r &amp;&amp; height[l] &lt; tmp) &#123;</span><br><span class="line">                    l++;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                <span class="type">int</span> <span class="variable">tmp</span> <span class="operator">=</span> height[r--];</span><br><span class="line">                <span class="keyword">while</span> (l &lt; r &amp;&amp; height[r] &lt; tmp) &#123;</span><br><span class="line">                    r--;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> ans;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
+<h5 id="双指针"><a href="#双指针" class="headerlink" title="双指针"></a>双指针</h5><p>数组事先进行排序，a选定某个值，b和c相向移动寻找可能得结果。时间复杂度O(n^2)，空间复杂度O(1);</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">threeSumClosest</span><span class="params">(<span class="type">int</span>[] nums, <span class="type">int</span> target)</span> &#123;</span><br><span class="line">        Arrays.sort(nums);</span><br><span class="line">        <span class="type">int</span> <span class="variable">n</span> <span class="operator">=</span> nums.length, ans = nums[<span class="number">0</span>] + nums[<span class="number">1</span>] + nums[<span class="number">2</span>];</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">            <span class="type">int</span> <span class="variable">j</span> <span class="operator">=</span> i + <span class="number">1</span>, k = n - <span class="number">1</span>;</span><br><span class="line">            <span class="keyword">while</span> (j &lt; k) &#123;</span><br><span class="line">                <span class="type">int</span> <span class="variable">sum</span> <span class="operator">=</span> nums[i] + nums[j] + nums[k];</span><br><span class="line">                <span class="keyword">if</span> (sum == target) <span class="keyword">return</span> target;</span><br><span class="line">                <span class="keyword">if</span> (Math.abs(sum - target) &lt; Math.abs(ans - target)) ans = sum;</span><br><span class="line">                <span class="keyword">if</span> (sum &gt; target) &#123;</span><br><span class="line">                    k--;      </span><br><span class="line">                &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                    j++;                 </span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> ans;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       
 
       
@@ -233,18 +230,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2023/10/05/%E4%B8%89%E6%95%B0%E4%B9%8B%E5%92%8C/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          三数之和
-        
-      </div>
-    </a>
   
-  
-    <a href="/2023/10/03/%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">两数之和</div>
+    <a href="/2023/10/05/%E4%B8%89%E6%95%B0%E4%B9%8B%E5%92%8C/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">三数之和</div>
       <i class="icon-circle-right"></i>
     </a>
   
