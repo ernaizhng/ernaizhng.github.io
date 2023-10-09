@@ -6,17 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://ernaizhng.github.io">
-  <title>四数之和 | Sabot的个人博客</title>
+  <title>删除有序数组中的重复项 | Sabot的个人博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="给你一个由 n 个整数组成的数组 nums ，和一个目标值 target 。请你找出并返回满足下述全部条件且不重复的四元组 [nums[a], nums[b], nums[c], nums[d]] （若两个四元组元素一一对应，则认为两个四元组重复）：  0 &lt;&#x3D; a, b, c, d &lt; n a、b、c 和 d 互不相同 nums[a] + nums[b] + nums[c]">
+  <meta name="description" content="给你一个 非严格递增排列 的数组 nums ，请你 原地 删除重复出现的元素，使每个元素 只出现一次 ，返回删除后数组的新长度。元素的 相对顺序 应该保持 一致 。然后返回 nums 中唯一元素的个数。 考虑 nums 的唯一元素的数量为 k ，你需要做以下事情确保你的题解可以被通过： 更改数组 nums ，使 nums 的前 k 个元素包含唯一元素，并按照它们最初在 nums 中出现的顺序排列。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="四数之和">
-<meta property="og:url" content="https://ernaizhng.github.io/2023/10/08/%E5%9B%9B%E6%95%B0%E4%B9%8B%E5%92%8C/index.html">
+<meta property="og:title" content="删除有序数组中的重复项">
+<meta property="og:url" content="https://ernaizhng.github.io/2023/10/09/%E5%88%A0%E9%99%A4%E6%9C%89%E5%BA%8F%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E9%87%8D%E5%A4%8D%E9%A1%B9/index.html">
 <meta property="og:site_name" content="Sabot的个人博客">
-<meta property="og:description" content="给你一个由 n 个整数组成的数组 nums ，和一个目标值 target 。请你找出并返回满足下述全部条件且不重复的四元组 [nums[a], nums[b], nums[c], nums[d]] （若两个四元组元素一一对应，则认为两个四元组重复）：  0 &lt;&#x3D; a, b, c, d &lt; n a、b、c 和 d 互不相同 nums[a] + nums[b] + nums[c]">
+<meta property="og:description" content="给你一个 非严格递增排列 的数组 nums ，请你 原地 删除重复出现的元素，使每个元素 只出现一次 ，返回删除后数组的新长度。元素的 相对顺序 应该保持 一致 。然后返回 nums 中唯一元素的个数。 考虑 nums 的唯一元素的数量为 k ，你需要做以下事情确保你的题解可以被通过： 更改数组 nums ，使 nums 的前 k 个元素包含唯一元素，并按照它们最初在 nums 中出现的顺序排列。">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2023-10-08T13:45:27.000Z">
-<meta property="article:modified_time" content="2023-10-08T13:47:07.990Z">
+<meta property="article:published_time" content="2023-10-09T14:02:12.000Z">
+<meta property="article:modified_time" content="2023-10-09T14:05:08.810Z">
 <meta property="article:author" content="Sabot">
 <meta property="article:tag" content="leetcode">
 <meta name="twitter:card" content="summary">
@@ -155,54 +155,57 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-四数之和" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-删除有序数组中的重复项" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      四数之和
+      删除有序数组中的重复项
     </h1>
   
 
         
-        <a href="/2023/10/08/%E5%9B%9B%E6%95%B0%E4%B9%8B%E5%92%8C/" class="archive-article-date">
-  	<time datetime="2023-10-08T13:45:27.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-10-08</time>
+        <a href="/2023/10/09/%E5%88%A0%E9%99%A4%E6%9C%89%E5%BA%8F%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E9%87%8D%E5%A4%8D%E9%A1%B9/" class="archive-article-date">
+  	<time datetime="2023-10-09T14:02:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-10-09</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>给你一个由 n 个整数组成的数组 nums ，和一个目标值 target 。请你找出并返回满足下述全部条件且不重复的四元组 [nums[a], nums[b], nums[c], nums[d]] （若两个四元组元素一一对应，则认为两个四元组重复）：</p>
-<ul>
-<li>0 &lt;&#x3D; a, b, c, d &lt; n</li>
-<li>a、b、c 和 d 互不相同</li>
-<li>nums[a] + nums[b] + nums[c] + nums[d] &#x3D;&#x3D; target</li>
-</ul>
-<p>你可以按 任意顺序 返回答案 。</p>
-<p>示例 1：</p>
-<blockquote>
-<p>输入：nums &#x3D; [1,0,-1,0,-2,2], target &#x3D; 0</p>
-<p>输出：[[-2,-1,1,2],[-2,0,0,2],[-1,0,0,1]]</p>
-</blockquote>
+        <p>给你一个 非严格递增排列 的数组 nums ，请你 原地 删除重复出现的元素，使每个元素 只出现一次 ，返回删除后数组的新长度。元素的 相对顺序 应该保持 一致 。然后返回 nums 中唯一元素的个数。</p>
+<p>考虑 nums 的唯一元素的数量为 k ，你需要做以下事情确保你的题解可以被通过：</p>
+<p>更改数组 nums ，使 nums 的前 k 个元素包含唯一元素，并按照它们最初在 nums 中出现的顺序排列。nums 的其余元素与 nums 的大小不重要。<br>返回 k 。</p>
 <span id="more"></span>
 
+<p>判题标准:</p>
+<p>系统会用下面的代码来测试你的题解:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">int[] nums = [...]; // 输入数组</span><br><span class="line">int[] expectedNums = [...]; // 长度正确的期望答案</span><br><span class="line"></span><br><span class="line">int k = removeDuplicates(nums); // 调用</span><br><span class="line"></span><br><span class="line">assert k == expectedNums.length;</span><br><span class="line">for (int i = 0; i &lt; k; i++) &#123;</span><br><span class="line">    assert nums[i] == expectedNums[i];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>如果所有断言都通过，那么您的题解将被 通过。</p>
+<p> </p>
+<p>示例 1：</p>
+<blockquote>
+<p>输入：nums &#x3D; [1,1,2]</p>
+<p>输出：2, nums &#x3D; [1,2,_]</p>
+<p>解释：函数应该返回新的长度 2 ，并且原数组 nums 的前两个元素被修改为 1, 2 。不需要考虑数组中超出新长度后面的元素。</p>
+</blockquote>
 <p>示例 2：</p>
 <blockquote>
-<p>输入：nums &#x3D; [2,2,2,2,2], target &#x3D; 8</p>
-<p>输出：[[2,2,2,2]]</p>
+<p>输入：nums &#x3D; [0,0,1,1,1,2,2,3,3,4]</p>
+<p>输出：5, nums &#x3D; [0,1,2,3,4]</p>
+<p>解释：函数应该返回新的长度 5 ， 并且原数组 nums 的前五个元素被修改为 0, 1, 2, 3, 4 。不需要考虑数组中超出新长度后面的元素。
+ </p>
 </blockquote>
 <p>提示：</p>
 <ul>
-<li>1 &lt;&#x3D; nums.length &lt;&#x3D; 200</li>
-<li>-109 &lt;&#x3D; nums[i] &lt;&#x3D; 109</li>
-<li>-109 &lt;&#x3D; target &lt;&#x3D; 109</li>
+<li>1 &lt;&#x3D; nums.length &lt;&#x3D; 3 * 104</li>
+<li>-104 &lt;&#x3D; nums[i] &lt;&#x3D; 104</li>
+<li>nums 已按 非严格递增 排列</li>
 </ul>
-<h4 id="双指针"><a href="#双指针" class="headerlink" title="双指针"></a>双指针</h4><p>对数组进行排序，双层循环组合a和b，c和d使用双指针确定结果，时间复杂度O(n^3)，空间复杂度O(1);</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> List&lt;List&lt;Integer&gt;&gt; <span class="title function_">fourSum</span><span class="params">(<span class="type">int</span>[] nums, <span class="type">int</span> target)</span> &#123;</span><br><span class="line">        List&lt;List&lt;Integer&gt;&gt; ans = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;List&lt;Integer&gt;&gt;();</span><br><span class="line">        <span class="type">int</span> <span class="variable">n</span> <span class="operator">=</span> nums.length;</span><br><span class="line">        <span class="keyword">if</span> (n &lt; <span class="number">4</span>) <span class="keyword">return</span> ans;</span><br><span class="line">        Arrays.sort(nums);</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (i &gt; <span class="number">0</span> &amp;&amp; nums[i] == nums[i - <span class="number">1</span>]) <span class="keyword">continue</span>;</span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">j</span> <span class="operator">=</span> i + <span class="number">1</span>; j &lt; n; j++) &#123;</span><br><span class="line">                <span class="keyword">if</span> (j &gt; i + <span class="number">1</span> &amp;&amp; nums[j] == nums[j - <span class="number">1</span>]) <span class="keyword">continue</span>;</span><br><span class="line">                <span class="type">int</span> <span class="variable">sum</span> <span class="operator">=</span> target - nums[i] - nums[j];</span><br><span class="line">                <span class="type">int</span> <span class="variable">k</span> <span class="operator">=</span> j + <span class="number">1</span>, l = n - <span class="number">1</span>;</span><br><span class="line">                <span class="keyword">while</span> (k &lt; l) &#123;</span><br><span class="line">                    <span class="keyword">if</span> (nums[k] + nums[l] &lt; sum) &#123;</span><br><span class="line">                        k++;</span><br><span class="line">                    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (nums[k] + nums[l] &gt; sum) &#123;</span><br><span class="line">                        l--;</span><br><span class="line">                    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                        ans.add(Arrays.asList(nums[i], nums[j], nums[k], nums[l]));</span><br><span class="line">                        <span class="keyword">while</span> (++k &lt; l &amp;&amp; nums[k] == nums[k-<span class="number">1</span>]);</span><br><span class="line">                        <span class="keyword">while</span> (k &lt; --l &amp;&amp; nums[l] == nums[l+<span class="number">1</span>]);</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125; </span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> ans;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
+<h4 id="双指针"><a href="#双指针" class="headerlink" title="双指针"></a>双指针</h4><p>p指向最后一个有效值位置，q指向当前遍历位置，当前值不与有效值重复时，复制至p + 1位置，P++；</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">removeDuplicates</span><span class="params">(<span class="type">int</span>[] nums)</span> &#123;</span><br><span class="line">        <span class="type">int</span> <span class="variable">l</span> <span class="operator">=</span> <span class="number">0</span>, r = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">while</span> (r &lt; nums.length) &#123;</span><br><span class="line">            <span class="keyword">if</span> (nums[r] != nums[l]) &#123;</span><br><span class="line">                nums[++l] = nums[r];</span><br><span class="line">            &#125;</span><br><span class="line">            r++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> l + <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       
 
       
@@ -234,18 +237,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2023/10/09/%E5%88%A0%E9%99%A4%E6%9C%89%E5%BA%8F%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E9%87%8D%E5%A4%8D%E9%A1%B9/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          删除有序数组中的重复项
-        
-      </div>
-    </a>
   
-  
-    <a href="/2023/10/06/%E6%9C%80%E6%8E%A5%E8%BF%91%E7%9A%84%E4%B8%89%E6%95%B0%E4%B9%8B%E5%92%8C/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">最接近的三数之和</div>
+    <a href="/2023/10/08/%E5%9B%9B%E6%95%B0%E4%B9%8B%E5%92%8C/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">四数之和</div>
       <i class="icon-circle-right"></i>
     </a>
   
